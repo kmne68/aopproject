@@ -15,7 +15,8 @@ import java.math.BigDecimal;
 @Aspect
 public class ExecutionTimeLoggingAspectJ {
 
-    @Around("execution(public * *(..))")
+//    @Around("execution(public * *(..))")
+	@Around("execution(public void renewMember(String, String))")
     public Object profile(ProceedingJoinPoint pjp) throws Throwable {
         long startTime = System.nanoTime();
 
